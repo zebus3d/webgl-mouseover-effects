@@ -4,6 +4,19 @@ import Scene from "./scene";
 
 const scene = new Scene("container");
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// para cambiar de efecto:
+//console.log(window.scene = scene);
+window.scene = scene; // me guardo el objeto scene para acceder a Sketch.customPass.uniforms.uType.value y cambiar de efectos
+// en otro momento desde otro js puedo cambiar con esto el efecto:
+// scene.customPass.uniforms.uType.value = 0  // para el efecto colorful
+// scene.customPass.uniforms.uType.value = 1  // para el efecto zoom
+// scene.customPass.uniforms.uType.value = 2  // para el efecto random
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// para transpilar (compilar/convertir de javascript moderno a tradicional) con parcel y obtener en dist los .js de produccion:
+// npm run parcel build js/app.js
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // helper functions
 const MathUtils = {
   // map number x from range [a, b] to [c, d]
@@ -188,11 +201,16 @@ class SmoothScroll {
 
   update() {
     // sets the initial value (no interpolation) - translate the scroll value
-    for (const key in this.renderedStyles) {
-      this.renderedStyles[key].current = this.renderedStyles[
-        key
-      ].previous = this.renderedStyles[key].setValue();
-    }
+
+    //////////////////////////////////////////////////////////////////////////
+    // DESACTIVO LAS KEYS
+    // for (const key in this.renderedStyles) {
+    //   this.renderedStyles[key].current = this.renderedStyles[
+    //     key
+    //   ].previous = this.renderedStyles[key].setValue();
+    // }
+    //////////////////////////////////////////////////////////////////////////
+
     // translate the scrollable element
     this.setPosition();
     this.shouldRender = true;

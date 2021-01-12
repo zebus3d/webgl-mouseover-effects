@@ -11,9 +11,12 @@
 	<link rel="stylesheet" href="https://use.typekit.net/yae0eed.css">
 	<link rel="stylesheet" type="text/css" href="css/base.css" />
 	<script>
-	document.documentElement.className = "js";
-	var supportsCssVars = function() { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e };
-	supportsCssVars() || alert("Please view this in a modern browser that supports CSS Variables.");
+		document.documentElement.className = "js";
+		var supportsCssVars = function() {
+			var e, t = document.createElement("style");
+			return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
+		};
+		supportsCssVars() || alert("Please view this in a modern browser that supports CSS Variables.");
 	</script>
 </head>
 
@@ -22,19 +25,20 @@
 		<!-- begin scrollable -->
 		<div data-scroll>
 			<header class="header">
-				<h1 class="header__title">Interactive Hover Effects with Three.js</h1>
+				<!-- <h1 class="header__title">Interactive Hover Effects with Three.js</h1>
 				<div class="info">
 					<a class="info__link" href="https://tympanus.net/codrops/?p=49069">Article</a>
 					<a class="info__link" href="https://github.com/akella/webgl-mouseover-effects">GitHub</a>
-				</div>
+				</div> -->
 			</header>
 			<!-- begin section -->
 			<section class="section centered">
-				<img src="img/5.jpg" alt="Some image" id="texture">
+				<!-- <img src="img/5.jpg" alt="Some image" id="texture"> -->
+				<img src="img/6.jpg" class="js-image" alt="Some image" id="texture">
 			</section>
 			<!-- end section -->
-		</section>
-		<!-- end scrollable -->
+			</section>
+			<!-- end scrollable -->
 	</main>
 	<div id="container"></div>
 	<script src="js/step1.js"></script>

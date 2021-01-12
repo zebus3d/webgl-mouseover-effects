@@ -24,7 +24,7 @@ uniform int uType;
 	}
 
 	float hash12(vec2 p) {
-		float h = dot(p,vec2(127.1,311.7));	
+		float h = dot(p,vec2(127.1,311.7));
 		return fract(sin(h)*43758.5453123);
 	}
 
@@ -42,7 +42,7 @@ uniform int uType;
 void main()	{
 	vec2 newUV = vUv;
 	vec4 color = vec4(1.,0.,0.,1.);
-	
+
 	// colorful
 	if(uType==0){
 		float c = circle(newUV, uMouse, 0.0, 0.2);
@@ -60,7 +60,7 @@ void main()	{
 		color = texture2D(tDiffuse,warpedUV) + texture2D(tDiffuse,warpedUV)*vec4(vec3(c),1.);
 	}
 
-	// zoom
+	// random
 	if(uType==2){
 		float hash = hash12(vUv*10.);
 		// float c = -circle(newUV, uMouse, 0.0, 0.1+uVelo*2.)*40.*uVelo;

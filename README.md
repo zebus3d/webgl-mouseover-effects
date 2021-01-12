@@ -1,4 +1,4 @@
-# Interactive Hover Effects with Three.js
+# Interactive Hover Effects with Three.js (zebus3d modified)
 
 A simple tutorial on how to achieve an interactive mouseover/hover effect on images in some easy steps.
 
